@@ -155,6 +155,8 @@ Customer and seller location fields contained inconsistent formatting, including
 * Port Harcourt / PortHarcourt / Port-Harcourt
 * Ibadan / IBADAN
 
+![](cityName.png)
+
 **Decision:** Location values were standardized using trimming, casing, and known location corrections to ensure consistent geographic reporting.
 
 **Business Impact:** Improved accuracy of state-level analyses, particularly customer conversion and payment behavior reporting.
