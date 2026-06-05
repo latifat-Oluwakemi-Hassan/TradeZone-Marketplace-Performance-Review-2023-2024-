@@ -137,14 +137,7 @@ The most significant issue involved missing revenue-related fields across multip
 
 Further investigation showed that all affected records were linked to four products loaded into the database without a unit price:
 
-| Product ID |	Product Name |
-|---|---|
-| 'PROD0088' |	Kitchen Knife Set 7 Piece |
-| 'PROD0104' |	Standing Fan 18 inch 5-Speed |
-| 'PROD0205' |	Ribena Blackcurrant Drink 1L |
-| 'PROD0245' |	JAMB CBT Practice Questions |
-
-![My Image Description]
+![](productName.png)
 
 Because order values are calculated from product prices, missing unit prices propagated into order totals and payment amounts.
 
