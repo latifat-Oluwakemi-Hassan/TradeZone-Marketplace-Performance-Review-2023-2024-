@@ -173,6 +173,7 @@ Additional validation checks were performed to ensure data integrity:
 * Order totals were compared against item-level calculations to identify potential inconsistencies.
 
 
+![](Validation.png)
 
 These checks helped improve confidence in the reliability of the final analysis and recommendations.
 
