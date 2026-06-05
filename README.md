@@ -172,6 +172,8 @@ Additional validation checks were performed to ensure data integrity:
 * Review ratings outside the expected range were flagged for review.
 * Order totals were compared against item-level calculations to identify potential inconsistencies.
 
+
+
 These checks helped improve confidence in the reliability of the final analysis and recommendations.
 
 
