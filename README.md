@@ -17,7 +17,6 @@ Translating SQL Analysis into Business Decisions for Growth & Seller Operations
 - [Part C: Key Insights](#Part-c-Key-Insights)
 - [Recommendations](#Recommendations)
 - [What the Data Cannot Tell Us](#What-the-Data-Cannot-Tell-Us)
-- [Executive Memo](#Executive-Memo)
 - [Tools Used](#Tools-Used)
 - [Repository Structure](#Repository-Structure)
 - [How to Run](#How-to-Run)
@@ -182,11 +181,206 @@ These checks helped improve confidence in the reliability of the final analysis 
  ## Part B: Business Questions & SQL Analysis
  
 ### Q1: Customer Acquisition & 30-Day Conversion
-*Find the top 5 states by new sign-ups in 2024 and calculate the percentage who made at least one purchase within 30 days of signing up.
+*Find the top 5 states by new sign-ups in 2024 and calculate the percentage who made at least one purchase within 30 days of signing up.*
 
 
-**Result:**
-![](Q1result)
+**Result:** Lagos achieved the highest conversion rate (49.3%) while Kano (31.0%) and Oyo (33.3%) underperformed.
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q1%20result.png)
+
+### Q2: Product Performance
+*Top 10 products by total revenue in 2024.*
+
+**Result:** All top 10 products were Electronics. HP Pavilion 15 Laptop led with ₦26.7M in revenue across 25 orders. The top 10 ranged from ₦17.7M to ₦26.7M, reflecting strong demand for tech hardware and accessories.
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q2%20result.png)
+
+---
+
+### Q3: Seller Fulfilment Efficiency
+*Top 20 fastest sellers by average fulfilment hours, among those with at least 20 completed orders.*
+
+**Result:** Fastest fulfilment: **seller_id SELL034** at 91.20 hours average. However, SELL034 holds only a 3.25 customer rating despite being the quickest — showing that speed alone does not drive satisfaction. **seller_id SELL024** combined competitive speed (98.40 hrs) with a 4.08 rating.
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q3%20result.png)
+
+---
+
+### Q4: Quarterly Revenue Trends
+*Compare quarterly revenue across 2023 and 2024. Identify the strongest growth quarter.*
+
+
+**Result:** Q4 2024 recorded the strongest absolute revenue growth, increasing revenue by approximately ₦131.1M compared to Q4 2023 However, Q2 2024 achieved the highest year-over-year growth rate at 564.8%. 
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q4%20result.png)
+
+---
+
+### Q5: Customer Spend Segmentation
+*Segment 2024 customers into High, Medium, and Low Spenders.*
+
+**Result:** High Spenders account for **99.6% of all 2024 revenue.**
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q5%20result.png)
+
+---
+
+### Q6: Payment Method Preferences by State
+*Transaction count and total amount per payment method, per state.*
+
+**Result:** Card dominates in Lagos (371 transactions) and Rivers. Mobile Money leads in Kano. Cash on Delivery leads in Oyo. Urban states favour digital payments; others still rely on traditional methods.
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q6%20result.png)
+
+---
+
+### Q7: Review Ratings and Sales Performance
+*Group products by average rating. Calculate product count, total revenue and average unit price per group.*
+
+**Result:** Mid-Rated products outsell High-Rated products by approximately ₦500 million.
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q7%20result.png)
+
+---
+
+### Q8 — Top Seller Bonus Qualification
+*Top 10 sellers in 2024 by revenue, with at least 10 completed orders and average rating ≥ 4.0.*
+
+**Result:** 10 sellers qualified. **seller-id SELL024** led with ₦11M revenue and 4.08 rating. All 10 completed between 10 and 19 orders. Strong candidates for the 2025 bonus programme.
+
+![](https://github.com/latifat-Oluwakemi-Hassan/TradeZone-Marketplace-Performance-Review-2023-2024-/blob/main/Q8%20result.png)
+
+---
+
+## Part C: Key Insights
+
+ ### Insight 1: Weak Customer Conversion Despite High Acquisition. More Than Half of New Customers Are Not Converting Within 30 Days
+ *(Source: Q1)*
+
+Customer conversion remains a significant challenge across key markets. Even in Lagos, the platform's strongest acquisition state, only 49.32% of new sign-ups completed a purchase within 30 days. Conversion falls further in Kano at 31.03%. Across the top acquisition states, between 50% and 69% of newly acquired customers fail to transact within their first month. This indicates that TradeZone is effective at attracting users but less effective at activating them, reducing acquisition ROI and limiting the pipeline of future high-value customers.
+
+
+ ### Insight 2:  Revenue Is Highly Concentrated Among High-Spending Customers 
+ *(Source: Q5)*
+
+High-spending customers (≥ ₦100,000) contributed **₦412.9M** in revenue, compared to just **₦3.8M** from medium spenders and **₦1.8M** from low spenders. This indicates that TradeZone's revenue performance is overwhelmingly dependent on a small segment of high-value customers.
+The risk is not simply concentration; it is dependency. If a relatively small portion of these customers reduce their spending or stop purchasing altogether, overall platform revenue would be materially affected. The limited contribution from medium- and low-spending customers suggests that TradeZone has not yet developed a sufficiently broad revenue base to offset potential churn among its highest-value customers. Rather than a balanced customer portfolio, the platform relies heavily on a single revenue-driving segment, creating a structural risk to sustainable growth.
+
+
+ ### Insight 3: Seller Performance Is Uneven and Creates Marketplace Risk 
+ *(Source: Q3 & Q8)*
+
+A small group of sellers consistently meets both fulfilment and quality standards, while a broader segment operates below the platform's performance benchmarks. Some lower-rated sellers also process a significant volume of orders, increasing their influence on the overall customer experience. This creates a two-tier marketplace where a limited number of high-performing sellers sustain platform quality, while underperforming sellers contribute to inconsistent customer experiences. As a result, customer trust becomes vulnerable to seller performance, making it more difficult to improve retention and scale growth sustainably.
+
+---
+
+## Recommendation
+
+### Recommendation 1: Improve Early Customer Activation
+
+**Action**
+
+Deploy a structured 14-day onboarding and activation campaign targeting low-converting states such as Kano and Oyo. The program should include first-purchase incentives, personalized product recommendations, and targeted follow-up communications designed to encourage an initial transaction.
+
+**Owner**: Growth Team
+
+**Expected Outcome (60–90 Days)**
+
+* Increase 30-day customer conversion rates in underperforming states
+* Improve monetization of newly acquired users
+* Increase first-purchase revenue
+* Improve customer acquisition ROI
+
+### Recommendation 2: Strengthen Seller Performance Management
+
+**Action**
+
+Implement a seller segmentation framework based on fulfilment efficiency and customer ratings, with clear thresholds for rewards, performance monitoring, and corrective action. Sellers consistently falling below performance standards should be placed on improvement plans or deprioritized within the marketplace.
+
+**Owner**: Seller Operations Team
+
+**Expected Outcome (60–90 Days)**
+
+* Improve seller quality consistency across the platform
+* Increase fulfilment reliability
+* Reduce negative customer experiences linked to low-performing sellers
+* Strengthen customer trust and marketplace reputation
+
+---
+
+## What the Data Cannot Tell Us
+
+**Business Question**: Why are newly acquired customers failing to convert into paying users within their first 30 days?
+
+**Limitation**: The dataset shows whether customers convert, but not why they fail to convert.
+
+It cannot determine whether inactivity is caused by:
+
+* Pricing concerns
+* Poor onboarding experiences
+* Product dissatisfaction
+* Delivery expectations
+* Competitor switching
+
+Additional Data Required
+* Customer behavioural data (sessions, product views, cart abandonment)
+* Customer feedback data (surveys, churn reasons)
+* Marketing attribution data (campaign source and acquisition channel)
+
+This information would allow TradeZone to identify where customers disengage and design targeted retention strategies.
+
+---
+
+## Tools Used
+
+| Tool | Purpose |
+|---|---|
+| **PostgreSQL 17** | All data cleaning and business queries |
+| **pgAdmin** | Query execution and result validation |
+| **SQL (CTEs, Window Functions, Aggregate Functions, CASE, JOINS)** | Core query logic |
+
+---
+
+## Repository Structure
+
+```
+TradeZone-Marketplace-Performance-Review/
+│
+├── README.md
+│
+├── Part 1.sql               # Part A: Full data cleaning script
+│
+├── Q1.sql                   # Customer Acquisition & 30-Day Conversion
+├── Q2.sql                   # Product Performance
+├── Q3.sql                   # Seller Fulfilment Efficiency
+├── Q4.sql                   # Quarterly Revenue Trends
+├── Q5.sql                   # Customer Spend Segmentation
+├── Q6.sql                   # Payment Method Preferences by State
+├── Q7.sql                   # Review Ratings and Sales Performance
+├── Q8.sql                   # Top Seller Bonus Qualification
+│
+│
+└── Analyst_Memo.pdf         # Part C: For Head of Growth and Head of Seller Operations.
+```
+
+---
+
+## How to Run
+* Clone this repository.
+* Import the TradeZone database into PostgreSQL.
+* Open pgAdmin or your preferred SQL editor.
+* Open any `.sql` file directly in pgAdmin and execute.
+* Review query outputs and compare findings with the Executive Memo.
+
+
+## Key Takeaway
+
+TradeZone's strong revenue growth in 2024 masks several underlying operational risks, including weak customer activation, revenue concentration among high-value customers, and uneven seller performance.
+
+By combining SQL analysis, data quality investigation, and business-focused reporting, this project demonstrates how data can be translated into actionable insights and recommendations that support strategic decision-making for Growth and Seller Operations teams.
+
+The analysis shows that sustainable growth depends not only on acquiring more customers, but also on improving conversion, broadening the revenue base, and maintaining consistent marketplace quality.
+
 
 
 
