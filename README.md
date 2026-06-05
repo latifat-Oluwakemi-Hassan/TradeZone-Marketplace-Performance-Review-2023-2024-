@@ -184,7 +184,9 @@ These checks helped improve confidence in the reliability of the final analysis 
 ### Q1: Customer Acquisition & 30-Day Conversion
 *Find the top 5 states by new sign-ups in 2024 and calculate the percentage who made at least one purchase within 30 days of signing up.
 
-![]()
+
+**Result:**
+![](Q1result)
 
 
 
